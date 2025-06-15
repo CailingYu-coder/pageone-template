@@ -1,32 +1,43 @@
 body {
-  font-family: sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.1em;
   color: #333;
   margin: 0;
-  padding: 2rem;
-  position: relative; /* Needed for absolute positioning of children */
-  min-height: 100vh; /* Ensure body takes at least full viewport height */
+  padding: 0;
+  background-color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  line-height: 1.6;
 }
 
 h1 {
   color: #000000;
-  margin-bottom: 0; /* Adjust as h1 might have default bottom margin */
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 2rem 0;
+  text-align: left;
+  padding: 0 2rem;
 }
 
 .intro-text {
-  text-align: right; /* Position to the right */
-  margin-top: 18pt; /* Distance from the line above */
-  font-family: 'Brush Script MT', 'cursive', sans-serif; /* English cursive font */
-  font-size: 1.2em; /* Optional: adjust size */
+  text-align: left;
+  margin: 2rem;
+  font-size: 1.8em;
+  font-weight: 500;
+  line-height: 1.4;
+  max-width: 800px;
 }
 
 .intro-text a {
-  color: #0066cc; /* Style for the link */
+  color: #000000;
   text-decoration: none;
+  border-bottom: 2px solid #000;
+  transition: all 0.3s ease;
 }
 
 .intro-text a:hover {
-  text-decoration: underline;
+  color: #666;
+  border-bottom-color: #666;
 }
 
 .top-right-image {
@@ -47,38 +58,63 @@ h1 {
 }
 
 .quote-box {
-  position: absolute;
-  bottom: 2rem; /* Distance from bottom */
-  right: 2rem; /* Distance from right */
-  width: 250px; /* Square box width */
-  height: 250px; /* Square box height */
-  border: 2px solid #555;
-  padding: 15px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  overflow: auto; /* In case content is too long for the box */
-  /* Ensure it doesn't overlap - this depends on other elements' positions and sizes */
+  position: relative;
+  margin: 4rem 2rem;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  max-width: 800px;
 }
 
 .quote-box p {
   margin: 0;
-  font-size: 0.9em;
-  line-height: 1.4;
+  font-size: 1.2em;
+  line-height: 1.6;
+  font-style: italic;
+  color: #444;
 }
 
 .card {
-  border: 1px solid #ddd;
+  margin: 2rem;
+  padding: 2rem;
+  background: #ffffff;
   border-radius: 8px;
-  padding: 1rem;
-  margin: 1rem 0;
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  /* This card might need to be repositioned or its content adjusted */
-  /* to avoid overlap with absolutely positioned elements. */
-  /* For now, we'll leave it as is and address overlaps if they occur. */
-  /* It might be better to place it within the normal flow, away from absolute elements. */
-  margin-top: 50px; /* Example: Add some top margin to clear floated/absolute elements */
-  /* The original image inside .card was removed, so this style might not be relevant */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  max-width: 800px;
+}
+
+footer {
+  text-align: left;
+  padding: 2rem;
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  body {
+    font-size: 1em;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  .intro-text {
+    font-size: 1.5em;
+  }
+  
+  .quote-box {
+    margin: 2rem 1rem;
+  }
+}
+
+/* 确保链接颜色在背景图上可见 */
+a {
+  color: #007bff; /* 示例链接颜色，根据背景调整 */
+}
+a:hover {
+  color: #0056b3;
 }
 
 /* .card img style was removed as the image is now .top-right-image */

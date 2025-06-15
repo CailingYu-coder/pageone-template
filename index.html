@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html lang="en-EN">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>我的第一张网页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>李鱼非羊的个人空间</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>THIS IS MY SPACE!</h1>
-  <!-- "Something about me" 修改 -->
-  <p class="intro-text"><a href="new-page.html">Something about me</a></p>
+  <header>
+    <h1>你好，我是李鱼非羊</h1>
+  </header>
 
-  <!-- 图片修改：从 card 中移出，并赋予 class -->
-  <img src="images/000058.JPG" alt="示例图片" class="top-right-image">
+  <main>
+    <section class="intro-text">
+      <p>欢迎来到我的个人空间。这里记录着我的思考、创作和成长。</p>
+      <p><a href="new-page.html">了解更多关于我</a></p>
+    </section>
 
-  <!-- 引文修改：赋予 class -->
-  <div class="quote-box">
-    <p>When all things seem to fail, I go and watch the stonecutter hammering away at his rock, perhaps a hundred times without as much as a crack showing in it. Yet at the hundred-and-first blow, it will split in two. And I know it was not the last blow that did it, but all that had gone before.</p>
-  </div>
+    <section class="quote-box">
+      <p>当一切似乎都失败时，我会去看石匠敲打他的石头，也许敲了一百次都没有出现裂缝。但在第一百零一次敲击时，石头会裂成两半。我知道这不是最后一次敲击造成的，而是之前所有的努力。</p>
+    </section>
 
-  <!-- 原有的 card div，现在可能为空或包含其他内容 -->
-  <div class="card">
-    <!-- 如果 card 还有其他内容，保留在这里 -->
-    <!-- 例如: <p>This is the remaining content of the card.</p> -->
-  </div>
+    <section class="card">
+      <h2>最近在做什么</h2>
+      <ul>
+        <li>学习网页开发</li>
+        <li>探索AI和机器学习</li>
+        <li>记录生活点滴</li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <p> © 2025 by 孙玲</p>
+    <p>© 2025 李鱼非羊 | 保持热爱，保持探索</p>
   </footer>
 </body>
 </html>
