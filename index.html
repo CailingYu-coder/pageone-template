@@ -7,11 +7,21 @@
 </head>
 <body>
   <h1>THIS IS MY SPACE!</h1>
-  <p>Something about me</p>
+  <!-- "Something about me" 修改 -->
+  <p class="intro-text"><a href="new-page.html">Something about me</a></p>
 
-  <div class="card">
-    <img src="images/coffee.jpeg" alt="示例图片">
+  <!-- 图片修改：从 card 中移出，并赋予 class -->
+  <img src="images/000058.JPG" alt="示例图片" class="top-right-image">
+
+  <!-- 引文修改：赋予 class -->
+  <div class="quote-box">
     <p>When all things seem to fail, I go and watch the stonecutter hammering away at his rock, perhaps a hundred times without as much as a crack showing in it. Yet at the hundred-and-first blow, it will split in two. And I know it was not the last blow that did it, but all that had gone before.</p>
+  </div>
+
+  <!-- 原有的 card div，现在可能为空或包含其他内容 -->
+  <div class="card">
+    <!-- 如果 card 还有其他内容，保留在这里 -->
+    <!-- 例如: <p>This is the remaining content of the card.</p> -->
   </div>
 
   <footer>

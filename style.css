@@ -4,10 +4,66 @@ body {
   color: #333;
   margin: 0;
   padding: 2rem;
+  position: relative; /* Needed for absolute positioning of children */
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
 }
 
 h1 {
   color: #000000;
+  margin-bottom: 0; /* Adjust as h1 might have default bottom margin */
+}
+
+.intro-text {
+  text-align: right; /* Position to the right */
+  margin-top: 18pt; /* Distance from the line above */
+  font-family: 'Brush Script MT', 'cursive', sans-serif; /* English cursive font */
+  font-size: 1.2em; /* Optional: adjust size */
+}
+
+.intro-text a {
+  color: #0066cc; /* Style for the link */
+  text-decoration: none;
+}
+
+.intro-text a:hover {
+  text-decoration: underline;
+}
+
+.top-right-image {
+  position: absolute;
+  top: 2rem; /* Adjust based on padding */
+  right: 2rem; /* Adjust based on padding */
+  width: auto; /* Let height control width to maintain aspect ratio */
+  height: 150px; /* Example height, adjust for 3x size. Original size unknown */
+  /* To make it 3x, we need to know its original display size. Assuming original was ~50px height for example */
+  /* If original was 100px wide, 3x would be 300px wide. Let's use a fixed width for now and adjust if needed */
+  /* width: 300px; /* Example: if original was 100px wide */
+  /* transform: scale(3); /* This scales from center, might be complex with positioning */
+  /* Let's try setting a larger explicit size first */
+  max-width: 30%; /* Prevent it from being too large on small screens */
+  border-radius: 8px; /* Optional: keep rounded corners if desired */
+  /* 'Blend background' is vague. Assuming no harsh borders and it sits on body background */
+  /* If specific blending is needed, mix-blend-mode could be used but is more complex */
+}
+
+.quote-box {
+  position: absolute;
+  bottom: 2rem; /* Distance from bottom */
+  right: 2rem; /* Distance from right */
+  width: 250px; /* Square box width */
+  height: 250px; /* Square box height */
+  border: 2px solid #555;
+  padding: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  overflow: auto; /* In case content is too long for the box */
+  /* Ensure it doesn't overlap - this depends on other elements' positions and sizes */
+}
+
+.quote-box p {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.4;
 }
 
 .card {
@@ -17,10 +73,12 @@ h1 {
   margin: 1rem 0;
   background: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  /* This card might need to be repositioned or its content adjusted */
+  /* to avoid overlap with absolutely positioned elements. */
+  /* For now, we'll leave it as is and address overlaps if they occur. */
+  /* It might be better to place it within the normal flow, away from absolute elements. */
+  margin-top: 50px; /* Example: Add some top margin to clear floated/absolute elements */
+  /* The original image inside .card was removed, so this style might not be relevant */
 }
 
-.card img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 8px;
-}
+/* .card img style was removed as the image is now .top-right-image */
